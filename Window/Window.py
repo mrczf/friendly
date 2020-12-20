@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'MainWindow.ui'
+# Form implementation generated from reading ui file 'Window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.2
 #
@@ -14,7 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(602, 665)
+        MainWindow.resize(606, 665)
+        MainWindow.setIconSize(QtCore.QSize(30, 30))
+        MainWindow.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tr = QtWidgets.QPushButton(self.centralwidget)
@@ -53,13 +55,13 @@ class Ui_MainWindow(object):
         self.ckrb.setFont(font)
         self.ckrb.setAutoExclusive(False)
         self.ckrb.setObjectName("ckrb")
-        self.tj_yzhui = QtWidgets.QPushButton(self.centralwidget)
-        self.tj_yzhui.setGeometry(QtCore.QRect(400, 570, 101, 91))
+        self.tj_yhui = QtWidgets.QPushButton(self.centralwidget)
+        self.tj_yhui.setGeometry(QtCore.QRect(400, 570, 101, 91))
         font = QtGui.QFont()
         font.setFamily("Candara Light")
         font.setPointSize(11)
-        self.tj_yzhui.setFont(font)
-        self.tj_yzhui.setObjectName("tj_yzhui")
+        self.tj_yhui.setFont(font)
+        self.tj_yhui.setObjectName("tj_yhui")
         self.mj_yuan = QtWidgets.QPushButton(self.centralwidget)
         self.mj_yuan.setGeometry(QtCore.QRect(0, 570, 101, 91))
         font = QtGui.QFont()
@@ -130,13 +132,6 @@ class Ui_MainWindow(object):
         font.setPointSize(20)
         self.EnterButton.setFont(font)
         self.EnterButton.setObjectName("EnterButton")
-        self.msgbox = QtWidgets.QTextEdit(self.centralwidget)
-        self.msgbox.setGeometry(QtCore.QRect(1, 1, 600, 109))
-        font = QtGui.QFont()
-        font.setFamily("Corbel Light")
-        font.setPointSize(20)
-        self.msgbox.setFont(font)
-        self.msgbox.setObjectName("msgbox")
         self.key7 = QtWidgets.QPushButton(self.centralwidget)
         self.key7.setGeometry(QtCore.QRect(0, 180, 101, 101))
         font = QtGui.QFont()
@@ -172,13 +167,13 @@ class Ui_MainWindow(object):
         font.setPointSize(20)
         self.key1.setFont(font)
         self.key1.setObjectName("key1")
-        self.pushButton_23 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_23.setGeometry(QtCore.QRect(100, 380, 101, 101))
+        self.key2 = QtWidgets.QPushButton(self.centralwidget)
+        self.key2.setGeometry(QtCore.QRect(100, 380, 101, 101))
         font = QtGui.QFont()
         font.setFamily("Microsoft JhengHei Light")
         font.setPointSize(20)
-        self.pushButton_23.setFont(font)
-        self.pushButton_23.setObjectName("pushButton_23")
+        self.key2.setFont(font)
+        self.key2.setObjectName("key2")
         self.key6 = QtWidgets.QPushButton(self.centralwidget)
         self.key6.setGeometry(QtCore.QRect(200, 280, 101, 101))
         font = QtGui.QFont()
@@ -242,6 +237,13 @@ class Ui_MainWindow(object):
         font.setPointSize(20)
         self.division.setFont(font)
         self.division.setObjectName("division")
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.plainTextEdit.setGeometry(QtCore.QRect(0, 0, 601, 111))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft JhengHei Light")
+        font.setPointSize(18)
+        self.plainTextEdit.setFont(font)
+        self.plainTextEdit.setObjectName("plainTextEdit")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -250,33 +252,45 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.tr.setText(_translate("MainWindow", "tr\n植树问题"))
-        self.rt.setText(_translate("MainWindow", "rt\n机率"))
-        self.avr.setText(_translate("MainWindow", "avr\n平均值"))
-        self.ng.setText(_translate("MainWindow", "ng\n浓度"))
-        self.ckrb.setText(_translate("MainWindow", "ckrb\n鸡兔同笼"))
-        self.tj_yzhui.setText(_translate("MainWindow", "tj-yzhui\n圆锥体积"))
-        self.mj_yuan.setText(_translate("MainWindow", "mj-yuan\n圆形面积"))
-        self.tj_fang.setText(_translate("MainWindow", "tj-fang\n方体体积"))
-        self.tj_yuan.setText(_translate("MainWindow", "tj-yuan\n球体体积"))
-        self.tj_yzhu.setText(_translate("MainWindow", "tj-yzhu\n圆柱体积"))
-        self.mj_tixg.setText(_translate("MainWindow", "mj-tixg\n梯形面积"))
-        self.zc_fang.setText(_translate("MainWindow", "zc-fang\n平行四边形\n周长"))
-        self.zc_yuan.setText(_translate("MainWindow", "zc-yuan\n圆形周长"))
-        self.mj_fang.setText(_translate("MainWindow", "mj-fang\n平行四边形\n面积"))
-        self.mj_sanj.setText(_translate("MainWindow", "mj-sanj\n三角形面积"))
+        self.tr.setText(_translate("MainWindow", "tr\n"
+"植树问题"))
+        self.rt.setText(_translate("MainWindow", "rt\n"
+"机率"))
+        self.avr.setText(_translate("MainWindow", "avr\n"
+"平均值"))
+        self.ng.setText(_translate("MainWindow", "ng\n"
+"浓度"))
+        self.ckrb.setText(_translate("MainWindow", "ckrb\n"
+"鸡兔同笼"))
+        self.tj_yhui.setText(_translate("MainWindow", "tj-yhui\n"
+"圆锥体积"))
+        self.mj_yuan.setText(_translate("MainWindow", "mj-yuan\n"
+"圆形面积"))
+        self.tj_fang.setText(_translate("MainWindow", "tj-fang\n"
+"方体体积"))
+        self.tj_yuan.setText(_translate("MainWindow", "tj-yuan\n"
+"球体体积"))
+        self.tj_yzhu.setText(_translate("MainWindow", "tj-yzhu\n"
+"圆柱体积"))
+        self.mj_tixg.setText(_translate("MainWindow", "mj-tixg\n"
+"梯形面积"))
+        self.zc_fang.setText(_translate("MainWindow", "zc-fang\n"
+"平行四边形\n"
+"周长"))
+        self.zc_yuan.setText(_translate("MainWindow", "zc-yuan\n"
+"圆形周长"))
+        self.mj_fang.setText(_translate("MainWindow", "mj-fang\n"
+"平行四边形\n"
+"面积"))
+        self.mj_sanj.setText(_translate("MainWindow", "mj-sanj\n"
+"三角形面积"))
         self.EnterButton.setText(_translate("MainWindow", "E n t e r"))
-        self.msgbox.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Corbel Light\'; font-size:20pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"right\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'SimSun\';\">0.</span></p></body></html>"))
         self.key7.setText(_translate("MainWindow", "7"))
         self.key8.setText(_translate("MainWindow", "8"))
         self.key9.setText(_translate("MainWindow", "9"))
         self.key3.setText(_translate("MainWindow", "3"))
         self.key1.setText(_translate("MainWindow", "1"))
-        self.pushButton_23.setText(_translate("MainWindow", "2"))
+        self.key2.setText(_translate("MainWindow", "2"))
         self.key6.setText(_translate("MainWindow", "6"))
         self.key4.setText(_translate("MainWindow", "4"))
         self.key5.setText(_translate("MainWindow", "5"))
@@ -286,3 +300,5 @@ class Ui_MainWindow(object):
         self.Times.setText(_translate("MainWindow", "×"))
         self.Minus.setText(_translate("MainWindow", "－"))
         self.division.setText(_translate("MainWindow", "÷"))
+        self.plainTextEdit.setPlainText(_translate("MainWindow", "\n"
+""))
