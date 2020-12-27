@@ -1,6 +1,6 @@
 import time as tm
 import os
-from cover_type import *
+import math
 
 
 class Main:
@@ -14,41 +14,51 @@ class Main:
         except (ValueError, SyntaxError, NameError):
             return ''
 
+    def sin(self, n):
+        return math.sin(n)
+
+    def cos(self, n):
+        return math.cos(n)
+
+    def tan(self, n):
+        return math.tan(n)
+
     ##### 植树问题 #####
     def tree(self, _1, _2, _q, _s):
         # 棵数/全长/株距
-        if _q == 'zhuju':
-            if _s in ('one', 'rect'):
+        if _q == 'zhuju': # 株距（拼音5个字母，分别是1声、4声）
+            if _s in ('1', '4'):
                 return _1 / _2
-            elif _s == 'two':
+            elif _s == '2':
                 return _1 / (_2 - 1)
-            else:
+            elif _s == '0':
                 return _1 / (_2 + 1)
         if _q == 'keshu':
-            if _s in ('one', 'rect'):
+            if _s in ('1', '4'):
                 return _1 / _2
-            elif _s == 'two':
+            elif _s == '2':
                 return _1 / _2 + 1
-            else:
+            elif _s == '0':
                 return _1 / _2 - 1
-        if _q == 'quanchang':
-            if _s in ('one', 'rect'):
+        if _q == 'qunch':
+            if _s in ('1', '4'):
                 return _1 * _2
-            elif _s == 'two':
+            elif _s == '2':
                 return _1 * (_2 - 1)
-            else:
+            elif _s == '0':
                 return _1 * (_2 + 1)
 
     ##### 计算浓度 #####
     def nongdu(self, solute, solution):
         res = 1 / solute * solution * 100  # 浓度 = 溶质/溶液 * 100%（如：%100 = 10/10 * 100%） “/”指“分之”
         res = str(res) + '%'
-        print(res)
+        return res
 
     ##### 鸡兔同笼问题 #####
-    def chick_rabbit(self, footNum, ck_and_rb, ckFoot):
-        rbt = (footNum - ckFoot * ck_and_rb) / 2
-        print('兔数:', rbt)
+    def chick_rabbit(self, footNum, headNum, ckFoot):
+        rbt = (footNum - ckFoot * headNum) / 2
+        ckn = headNum - rbt
+        return f'兔数:{rbt}\n鸡数:{ckn}'
 
     ##### 平均数 #####
     def average(self, num, *xng):
@@ -61,36 +71,36 @@ class Main:
     def rate(self, allow_num, all_num):
         n = round(allow_num / all_num * 100, 2)
         n = str(n) + '%'
-        print(n)
+        return n
 
     ##### 从这里开始，到 End 结束，这些函数的参数的类型皆为 float，都是关于图形的，特此说明 #####
 
     def mj_fang(self, a, h):
-        print(a * h)
+        return a * h
 
     def zc_fang(self, a, b):
-        print((a + b) * 2)
+        return (a + b) * 2
 
     def mj_sanj(self, a, h):
-        print(a * h / 2)
+        return a * h / 2
 
     def mj_tixg(self, a, b, h):
-        print((a + b) * h / 2)
+        return (a + b) * h / 2
 
     def mj_yuan(self, r):
-        print(r * 2 * 3.14)
+        return r * 2 * 3.14
 
     def zc_yuan(self, r):
-        print(3.14 * (r * r))
+        return 3.14 * (r * r)
 
     def tj_fang(self, a, b, h):
-        print(a * b * h)
+        return a * b * h
 
     def tj_yzhu(self, S, h):
-        print(S * h)
+        return S * h
 
     def tj_yhui(self, S, h):
-        print(S * h / 3)
+        return S * h / 3
 
     ##### 上文提到的 End，那条注解的适用范围到此结束，特此说明 #####
 
