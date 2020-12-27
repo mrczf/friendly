@@ -1,5 +1,5 @@
-/*
-!Window
-Window/.idea
-!.gitignore
-!README.md
+/Console
+/Package
+/Window/.idea
+/__pycache__
+/.idaa
