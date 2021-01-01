@@ -23,6 +23,12 @@ class Main:
     def tan(self, n):
         return math.tan(n)
 
+    def abs(self, n):
+        return abs(n)
+
+    def sqrt(self, n):
+        return math.sqrt(n)
+
     ##### 植树问题 #####
     def tree(self, _1, _2, _q, _s):
         # 棵数/全长/株距

@@ -30,6 +30,8 @@ class InitWindow(QMainWindow, Ui_MainWindow):
         self.sin.clicked.connect(self.sinn)
         self.cos.clicked.connect(self.coss)
         self.tan.clicked.connect(self.tann)
+        self.sqrt.clicked.connect(self.sqrts)
+        self.abs.clicked.connect(self.abss)
 
         self.zc_fang.clicked.connect(self.zcfang)
         self.zc_yuan.clicked.connect(self.zcyuan)
@@ -82,7 +84,8 @@ class InitWindow(QMainWindow, Ui_MainWindow):
     '''
     def enter(self, button):
         string = self.s.toPlainText()
-        lt = string.split(' ')
+        lt = string.split()
+        lt = [lt[0]] + [self.pro.default(x) for x in lt[1:]]
         rs = ''
         pro = self.pro
         if string.strip() == '':
@@ -105,6 +108,10 @@ class InitWindow(QMainWindow, Ui_MainWindow):
                     rs = pro.cos(float(lt[1]))
                 elif lt[0] == 'tan':
                     rs = pro.tan(float(lt[1]))
+                elif lt[0] == 'abs':
+                    rs = pro.abs(float(lt[1]))
+                elif lt[0] == 'sqrt':
+                    rs = pro.sqrt(float(lt[1]))
 
                 ##### 图形 #####
                 if lt[0] == 'zc':
@@ -140,6 +147,20 @@ class InitWindow(QMainWindow, Ui_MainWindow):
         lt += '.'
         self.lt = lt.split(' ')
         self.s.setPlainText(lt)
+
+    def sqrts(self, button):
+        if self.s.toPlainText()[0] in [str(x) for x in range(1, 11)]:
+            self.lt.insert(0, 'sqrt' + ' ')
+        else:
+            self.lt = ['sqrt' + ' ']
+        self.s.setPlainText(' '.join(self.lt))
+
+    def abss(self, button):
+        if self.s.toPlainText()[0] in [str(x) for x in range(1, 11)]:
+            self.lt.insert(0, 'abs' + ' ')
+        else:
+            self.lt = ['abs' + ' ']
+        self.s.setPlainText(' '.join(self.lt))
 
     def sinn(self, button):
         if self.s.toPlainText()[0] in [str(x) for x in range(1, 11)]:
