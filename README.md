@@ -6,12 +6,27 @@
 
 ###### **Version**
 
-**v3.1.2 *build 203.1207.89***
+**v4.0.0**
 
 ###### **New Features**
 
-1. ***Change to window version (command version is no longer used).***
-2. ***Add some new functions.***
-3. ***Standardize the command.***
+- ***Simplify code***
+- ***The bug fixed are:***
+  
+  *1.Multiple decimal points can be used in a number.*
+  
+  *2.Multiple commands can be used in one line.*
 
-###### Function screenshot
+###### **Function Screenshot**
+
+1.At startup
+
+<img src="./window1.jpg" alt="startup" style="zoom:80%;" />
+
+2.When calculating
+
+<img src="./window2.jpg" alt="calculating" style="zoom:80%;" />
+
+3.When an error occurs
+
+<img src="./window3.jpg" alt="error occurs" style="zoom:80%;" />

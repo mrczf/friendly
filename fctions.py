@@ -32,7 +32,7 @@ class Main:
     ##### 植树问题 #####
     def tree(self, _1, _2, _q, _s):
         # 棵数/全长/株距
-        if _q == 'zhuju': # 株距（拼音5个字母，分别是1声、4声）
+        if _q == 'zhuju':
             if _s in ('1', '4'):
                 return _1 / _2
             elif _s == '2':
@@ -75,7 +75,7 @@ class Main:
 
     ##### 优秀率/及格率/...率 #####
     def rate(self, allow_num, all_num):
-        n = round(allow_num / all_num * 100, 2)
+        n = round(allow_num / all_num * 100, 5)
         n = str(n) + '%'
         return n
 
