@@ -21,12 +21,12 @@
 
 1.At startup
 
-<img src="./window1.jpg" alt="startup" style="zoom:80%;" />
+<img src="./markdownPic/window1.jpg" alt="startup" style="zoom:80%;" />
 
 2.When calculating
 
-<img src="./window2.jpg" alt="calculating" style="zoom:80%;" />
+<img src="./markdownPic/window2.jpg" alt="calculating" style="zoom:80%;" />
 
 3.When an error occurs
 
-<img src="./window3.jpg" alt="error occurs" style="zoom:80%;" />
+<img src="./markdownPic/window3.jpg" alt="error occurs" style="zoom:80%;" />

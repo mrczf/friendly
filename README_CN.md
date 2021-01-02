@@ -22,12 +22,12 @@
 
 1.启动时
 
-<img src="./window1.jpg" alt="启动时" style="zoom:80%;" />
+<img src="./markdownPic/window1.jpg" alt="启动时" style="zoom:80%;" />
 
 2.计算时
 
-<img src="./window2.jpg" alt="calculating" style="zoom:80%;" />
+<img src="./markdownPic/window2.jpg" alt="calculating" style="zoom:80%;" />
 
 3.出错时
 
-<img src="./window3.jpg" alt="error occurs" style="zoom:80%;" />
+<img src="./markdownPic/window3.jpg" alt="error occurs" style="zoom:80%;" />
